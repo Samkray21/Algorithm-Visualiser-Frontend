@@ -1,0 +1,22 @@
+<div class="container">
+    <header>
+        <p>Minimum Spanning Tree Visualiser</p>
+        <div>
+            <select id="algo-select" (change)="valueChange($event.target.value)">
+                <option value="">Choose Algorithm</option>
+                <option *ngFor="let i of listItems" value={{i}}>{{i}}</option>
+            </select>
+            <select id="node-select" (change)="valueChangeNode($event.target.value)">
+                <option value="">Choose Starting Node</option>
+                <option *ngFor="let i of listNodes" value={{i}}>{{i}}</option>
+            </select>
+            <button id="Button" (click)="generate()">Generate</button>
+            <button id="ButtonReset" (click)="reset()">Reset</button>
+        </div>
+    </header>
+
+    <main>
+        <div #mapContainer id="map"></div>
+    </main>
+</div>
+
